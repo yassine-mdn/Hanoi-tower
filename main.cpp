@@ -2,6 +2,8 @@
 // Created by yassine on 23/10/2021.
 //
 #include <iostream>
+#include <cassert>
+#include "ConsoleColor.h"
 
 void hanoi(long n, char debut, char fin);
 
@@ -10,8 +12,10 @@ void print(char debut, char fin);
 int main()
 {
 	long n{ 0 };
-	std::cout << "donner le nombre detage :" << std::endl;
+	std::cout << "Ce programme nous permet de voir les differentes etapes pour resoudre une tour hatoi avec " << red << "n "<< white << "etages" <<std::endl;
+	std::cout << "donner le nombre d\'etage :" << std::endl;
 	std::cin >> n;
+	assert(n>0);
 	hanoi(n, 'A', 'C');
 	return 0;
 }
@@ -37,6 +41,6 @@ void hanoi(long n, char debut, char fin)
 void print(char debut, char fin)
 {
 	static int etape{ 1 };
-	std::cout << "etape " << etape << " : " << debut << "->" << fin << std::endl;
+	std::cout << blue <<"etape " << yellow << etape << blue << " : " << red << debut << white << "->" << red << fin << std::endl;
 	++etape;
 }

@@ -3,4 +3,4 @@ project(Hanoi_tower)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Hanoi_tower main.cpp test.h)
+add_executable(Hanoi_tower main.cpp ConsoleColor.h)
